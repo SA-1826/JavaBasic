@@ -2,7 +2,7 @@ package basic.q06;
 
 public class ShowSeasons {
 	public static void main(String[] args) {
-		var month = 13;
+		var month = 1;
 		switch (month) {
 			case 1, 2, 12 -> System.out.println(month + "月は冬です");
 			case 3, 4, 5 -> System.out.println(month + "月は春です");
