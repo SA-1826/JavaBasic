@@ -3,7 +3,7 @@ package product;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductsManager {
+public class ProductsManager implements Searchable {
 	private List<Product> products;
 	
 	public ProductsManager() {
@@ -34,5 +34,16 @@ public class ProductsManager {
 		for (Product product : products) {
 			System.out.println(product);
 		}
+	}
+	
+	@Override
+	public List<Product> search(String keyword) {
+		List<Product> result = new ArrayList<>();
+		for (Product product : products) {
+			if (product.getName().contains(keyword)) {
+				result.add(product);
+			}
+		}
+		return result;
 	}
 }

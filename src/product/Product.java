@@ -1,10 +1,10 @@
 package product;
 
 public class Product {
-	private int id;
-	private String name;
-	private int price;
-	private int stock;
+	protected int id;
+	protected String name;
+	protected int price;
+	protected int stock;
 	
 	public Product(int id, String name, int price, int stock) {
 		this.id = id;
